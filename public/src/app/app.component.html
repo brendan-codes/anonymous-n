@@ -1,0 +1,8 @@
+<!-- <a [routerLink]="['/home']">Home</a>
+<a [routerLink]="['/products']">Product List</a>
+<a [routerLink]="['/products/new']">Product Create</a> 
+
+<router-outlet></router-outlet> -->
+<h1>{{title}}</h1>
+<app-note-create></app-note-create>
+<app-note *ngFor="let note of notes" [note]='note'></app-note> 

@@ -1,0 +1,13 @@
+<h2>
+Add a Note
+</h2>
+  <form (submit)="onSubmit()">
+  <textarea name="content" [(ngModel)]="note.content"
+  required
+  minlength="3"
+  #content="ngModel"
+  ></textarea>
+  <div *ngIf="!content.valid">Error Note</div>
+  <input *ngIf="!(content.valid)" disabled=true type="submit" />
+  <input *ngIf="content.valid" type="submit" />
+</form>  
